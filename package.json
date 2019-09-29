@@ -16,13 +16,11 @@
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
     "xmldom": "^0.1.27",
-    "xpath": "^0.0.27"
-  },
-  "devDependencies": {
+    "xpath": "^0.0.27",
     "pino-pretty": "^3.2.1"
   },
   "scripts": {
-    "harvest-debug": "LOG_LEVEL=debug node ./harvest/index.js | ./node_modules/.bin/pino-pretty",
+    "harvest": "LOG_LEVEL=debug node ./harvest/index.js | ./node_modules/.bin/pino-pretty",
     "start": "node ./service/index.js"
   },
   "engines": {
