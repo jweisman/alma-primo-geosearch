@@ -1,0 +1,31 @@
+{
+  "name": "alma-primo-geosearch",
+  "version": "0.0.1",
+  "description": "Enable geo-searching widget for Primo",
+  "main": "index.js",
+  "author": "Josh Weisman",
+  "license": "MIT",
+  "dependencies": {
+    "almarestapi-lib": "^1.1.0",
+    "cors": "^2.8.5",
+    "exif-parser": "^0.1.10",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.2",
+    "nconf": "^0.8.2",
+    "pino": "^5.13.3",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
+    "xmldom": "^0.1.27",
+    "xpath": "^0.0.27"
+  },
+  "devDependencies": {
+    "pino-pretty": "^3.2.1"
+  },
+  "scripts": {
+    "harvest-debug": "LOG_LEVEL=debug node ./harvest/index.js | ./node_modules/.bin/pino-pretty",
+    "start": "node ./service/index.js"
+  },
+  "engines": {
+    "node": "11.x"
+  }
+}
