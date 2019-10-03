@@ -16,8 +16,6 @@ app.get('/', (request, response) => {
 })
 
 app.get('/geojson', async (request, response) => {
-  var lat=request.query.lat; 
-  var long=request.query.long;
   var results = await client.find({});
   results = results.map(obj => {
     return {

@@ -1,0 +1,17 @@
+{
+  "name": "Alma-Primo-Geosearch",
+  "description": "Enable geo-searching widget for Primo",
+  "repository": "https://github.com/jweisman/alma-primo-geosearch",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["exlibris"],
+  "env": {
+      "OAI_URL": {
+        "description": "URL of the OAI publishing profile, i.e. https://my-inst.alma.exlibrisgroup.com/view/oai/MY_INST/request?verb=ListRecords&set=SET_NAME&metadataPrefix=oai_qdc.",
+        "generator": "secret"
+      }
+    }, 
+  "addons": [
+      "mongolab",
+      "scheduler"
+    ]
+}

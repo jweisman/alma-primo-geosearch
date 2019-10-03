@@ -1,0 +1,48 @@
+<md-content layout-xs="column" layout="row">
+    <div flex="60" layout="column">
+        <md-card class="default-card">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Questions? Comments?</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <a href="#" class="arrow-link">
+                    Let us know what you think!
+                    <prm-icon link-arrow>
+                        <md-icon md-svg-icon="./images/chevron-right.svg"></md-icon>
+                    </prm-icon>
+                </a>
+            </md-card-content>
+        </md-card>      
+    </div>
+    <div flex-xs flex="40" layout="column">
+        <md-card class="default-card">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Where can I get help?</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p>
+                    <a href="#">Ask a librarian</a> how to start your search NOW!
+                </p>
+
+            </md-card-content>
+        </md-card>
+    </div>
+</md-content>
+<div layout="row">
+    <md-card flex="100" class="default-card">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">GeoSearch- ELUNA and IGELU Conferences </span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <geo-search 
+            geojson-url="https://alma-primo-geosearch.herokuapp.com/geojson"
+            mapbox-access-token="pk.eyJ1IjoiandlaXNtYW4iLCJhIjoiY2swd2F5Z2lrMGgwbzNscXZxeTFmMGI3MiJ9.6CWm1uu9i8r0FGv6AjDynw"></geo-search>
+        </md-card-content>
+    </md-card>  
+</div>

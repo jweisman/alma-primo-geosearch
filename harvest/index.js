@@ -7,10 +7,12 @@ const MongoClient = require('../utilities/mongodb.js');
 
 nconf.env().file({ file: './config.json' });
 
-const select    = xpath.useNamespaces({"oai": "http://www.openarchives.org/OAI/2.0/",
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "dcterms": "http://purl.org/dc/terms/1.1/", 
-    "oai_qdc": "http://alma.exlibrisgroup.com/schemas/qdc-1.0/"
+const select    = xpath.useNamespaces({
+    "oai":      "http://www.openarchives.org/OAI/2.0/",
+    "dc":       "http://purl.org/dc/elements/1.1/",
+    "dcterms":  "http://purl.org/dc/terms/1.1/", 
+    "oai_qdc":  "http://alma.exlibrisgroup.com/schemas/qdc-1.0/",
+    "xsi":      "http://www.w3.org/2001/XMLSchema-instance"
   });
 const OAI_XPATH = "/oai:OAI-PMH/oai:ListRecords/oai:record";
 const logger = pino({ level: nconf.get('LOG_LEVEL') || 'info' });
@@ -26,14 +28,14 @@ async function process(url) {
 
     // Retrieve from time
     const settings = await client.findOne({ _id: '_settings' }, { collection: 'settings' });
-    //if (settings) { url += `&from=${settings.from}`};
+    if (settings) { url += `&from=${settings.from}`};
 
     logger.info('Begin harvesting @ %s', url);
     var oai = await request(url);
     oai = new dom().parseFromString(oai);
     var actions = [];
     select(OAI_XPATH, oai).forEach((record) => {
-      select("oai:metadata/oai_qdc:dc/dc:identifier", record)
+      select("oai:metadata/oai_qdc:dc/dc:identifier[@xsi:type='dcterms:URI']", record)
         .filter(identifier => identifier.firstChild.data.startsWith('https://'))
         .forEach(representation => { actions.push(processRep(representation.firstChild.data)); });
       });
