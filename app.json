@@ -7,7 +7,7 @@
   "env": {
       "OAI_URL": {
         "description": "URL of the OAI publishing profile, i.e. https://my-inst.alma.exlibrisgroup.com/view/oai/MY_INST/request?verb=ListRecords&set=SET_NAME&metadataPrefix=oai_qdc.",
-        "generator": "secret"
+        "required": true
       }
     }, 
   "addons": [

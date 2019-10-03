@@ -16,7 +16,7 @@ The harvest script and GeoJSON service depend on two environment variables:
 
 The Primo view defines an AngularJS component called `geo-search` which exposes two attributes:
 * `geojson-url`: The service which returns the GeoJSON data
-* `mapbox-access-token`: The access token for the [MapBox SDK)[https://mapbox.com]. You can get a free access token at the MapBox website.
+* `mapbox-access-token`: The access token for the [MapBox SDK](https://mapbox.com). You can get a free access token at the MapBox website.
 
 The `homepage_en.html` page in the Primo view includes the `geo-search` component as follows:
 ```
