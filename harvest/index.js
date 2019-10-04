@@ -40,7 +40,7 @@ async function process(url) {
         .forEach(representation => { actions.push(processRep(representation.firstChild.data)); });
       });
     await Promise.all(actions);
-    logger.info('Harvested %d reprentations', actions.length);
+    logger.info('Harvested %d representations', actions.length);
 
     // If resumption token, go again
     var resumptionToken = select('/oai:OAI-PMH/oai:ListRecords/oai:resumptionToken', oai, true);

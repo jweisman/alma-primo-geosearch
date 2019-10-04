@@ -23,7 +23,14 @@ The `homepage_en.html` page in the Primo view includes the `geo-search` componen
 <geo-search geojson-url="https://alma-primo-geosearch.herokuapp.com/geojson" mapbox-access-token="pk.eyJ1IjoiandxxxxxxxxxGI3MiJ9.6CWm1uuxxxxxxynw"></geo-search>
 ```
 
+## Running
+To run the service, use `npm start`.
+
+To run the harvest task, use `npm run harvest`.
+
 ## Deploy
 You can use this button to deploy the app to Heroku. The deployment will add a MongoDB instance.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+Use the Scheduler add-on the schedule the harvest script. In the Heroku web interface, select the Scheduler add-on. Then create a new job to run daily. For the Run Command, enter `npm run harvest`.
