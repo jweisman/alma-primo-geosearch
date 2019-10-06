@@ -13,5 +13,9 @@
   "addons": [
       "mongolab",
       "scheduler"
-    ]
+    ],
+  "scripts": {
+    "postdeploy": "npm run harvest"
+  },
+  "success_url": "/geojson"
 }
