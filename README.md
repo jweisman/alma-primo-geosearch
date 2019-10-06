@@ -33,4 +33,4 @@ You can use this button to deploy the app to Heroku. The deployment will add a M
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-Use the Scheduler add-on the schedule the harvest script. In the Heroku web interface, select the Scheduler add-on. Then create a new job to run daily. For the Run Command, enter `npm run harvest`.
+Use the Scheduler add-on to schedule the harvest script. In the Heroku web interface, select the Scheduler add-on. Then create a new job to run daily. For the Run Command, enter `npm run harvest`.

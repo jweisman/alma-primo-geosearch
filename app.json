@@ -2,7 +2,6 @@
   "name": "Alma-Primo-Geosearch",
   "description": "Enable geo-searching widget for Primo",
   "repository": "https://github.com/jweisman/alma-primo-geosearch",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
   "keywords": ["exlibris"],
   "env": {
       "OAI_URL": {
