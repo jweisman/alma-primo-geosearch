@@ -15,7 +15,7 @@
     "pino": "^5.13.3",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
-    "xmldom": "^0.1.27",
+    "xmldom": "^0.6.0",
     "xpath": "^0.0.27",
     "pino-pretty": "^3.2.1"
   },
