@@ -11,7 +11,7 @@
     "exif-parser": "^0.1.10",
     "express": "^4.17.1",
     "mongodb": "^3.3.2",
-    "nconf": "^0.8.2",
+    "nconf": "^0.11.4",
     "pino": "^5.13.3",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
