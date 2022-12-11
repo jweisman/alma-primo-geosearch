@@ -9,7 +9,7 @@
     "almarestapi-lib": "^1.1.0",
     "cors": "^2.8.5",
     "exif-parser": "^0.1.10",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mongodb": "^3.3.2",
     "nconf": "^0.8.2",
     "pino": "^5.13.3",
